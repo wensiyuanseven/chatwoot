@@ -29,7 +29,7 @@ console:
 server:
 	RAILS_ENV=$(RAILS_ENV) bundle exec rails server -b 0.0.0.0 -p 3000
 
-burn:
+burn:bundle exec rails server
 	bundle && pnpm install
 
 run:
@@ -49,7 +49,7 @@ debug:
 debug_worker:
 	overmind connect worker
 
-docker: 
+docker:
 	docker build -t $(APP_NAME) -f ./docker/Dockerfile .
 
 .PHONY: setup db_create db_migrate db_seed db_reset db console server burn docker run force_run debug debug_worker

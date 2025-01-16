@@ -1,14 +1,14 @@
-source 'https://rubygems.org'
+source 'https://rubygems.org' # 指定 Gem 包的下载源。这里是官方 RubyGems 仓库。
 
 ruby '3.3.3'
 
-##-- base gems for rails --##
+##-- Rails 核心依赖 Gem --##
 gem 'rack-cors', '2.0.0', require: 'rack/cors'
 gem 'rails', '~> 7.0.8.4'
-# Reduces boot times through caching; required in config/boot.rb
+# 通过缓存减少启动时间；config/boot.rb 中需要
 gem 'bootsnap', require: false
 
-##-- rails application helper gems --##
+##-- Rails 应用程序助手 gems --##
 gem 'acts-as-taggable-on'
 gem 'attr_extras'
 gem 'browser'
@@ -21,11 +21,11 @@ gem 'telephone_number'
 gem 'time_diff'
 gem 'tzinfo-data'
 gem 'valid_email2'
-# compress javascript config.assets.js_compressor
+# 压缩 javascript config.assets.js_compressor
 gem 'uglifier'
-##-- used for single column multiple binary flags in notification settings/feature flagging --##
+##-- 用于通知设置/功能标记中的单列多个二进制标记 --##
 gem 'flag_shih_tzu'
-# Random name generator for user names
+# 用户名的随机名称生成器
 gem 'haikunator'
 # Template parsing safely
 gem 'liquid'
@@ -40,7 +40,7 @@ gem 'down'
 # authentication type to fetch and send mail over oauth2.0
 gem 'gmail_xoauth'
 # Lock net-smtp to 0.3.4 to avoid issues with gmail_xoauth2
-gem 'net-smtp',  '~> 0.3.4'
+gem 'net-smtp', '~> 0.3.4'
 # Prevent CSV injection
 gem 'csv-safe'
 
